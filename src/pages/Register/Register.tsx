@@ -58,6 +58,8 @@ class Register extends React.Component<Props, State> {
         if (isValid) {
             formSteps[activeStepIndex].completed = true;
             this.setState({ formSteps, activeStepIndex: activeStepIndex + 1 })
+        } else {
+            formSteps[activeStepIndex].completed = false;
         }
     };
 
